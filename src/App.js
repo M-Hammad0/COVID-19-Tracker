@@ -5,7 +5,8 @@ import { fetchData } from "./api/index";
 
 export default function App() {
   const [stats,setStats] = useState({
-    data: {}
+    data: {},
+    country: '',
   });
   useEffect(() => {
     const getData = async () => {
@@ -13,12 +14,18 @@ export default function App() {
       setStats({data:fetchedData});
     };
     getData();
-  }, []);
+  },[]);
+
+  const handleCountry = async (country) => {
+    const fetchedData = await fetchData(country);
+    setStats({data: fetchedData, country:country});
+  }
+
   return (
     <div className={styles.container}>
       <Cards data={stats.data} />
-      <CountryPicker />
-      <Charts />
+      <CountryPicker handleCountry={handleCountry} />
+      <Charts data={stats.data} country={stats.country} />
     </div>
   );
 }
