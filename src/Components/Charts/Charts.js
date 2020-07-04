@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchDailyData } from "../../api";
-import { Line, Bar, Doughnut } from "react-chartjs-2";
+import { Line, Doughnut } from "react-chartjs-2";
 import styles from "./Charts.module.css";
 
 function Charts({ data, country }) {
