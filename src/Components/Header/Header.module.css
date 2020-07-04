@@ -1,0 +1,33 @@
+.container{
+      margin: 3% auto;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+}
+
+
+.heading {
+      margin: auto 2%;
+      white-space: nowrap;
+      font-size: 1.5rem;
+      color: palevioletred;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 900;
+}
+
+.image {
+      width: 15vh;
+      margin-left: 2%;
+}
+
+.image:hover {
+      filter: grayscale(100%);
+}
+
+@media (max-width: 770px) {
+      .heading{
+            white-space: normal;
+            margin: auto 0 auto 5%;
+            width: 55%;
+      }
+}

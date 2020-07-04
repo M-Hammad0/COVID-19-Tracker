@@ -1,5 +1,8 @@
 body { 
-      background-color: rgb(250,250,250);
+      background-color: rgb(250,251,250);
+      /* background-image: url(./images/virus.png);
+      background-repeat: space;
+      filter: grayscale(100%); */
 }
 
 .container {
@@ -8,3 +11,4 @@ body {
       justify-content: center;
       flex-direction: column;
 }
+

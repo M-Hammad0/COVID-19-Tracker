@@ -19,7 +19,6 @@ function Cards({data: {confirmed,recovered,deaths,lastUpdate}}) {
             seperator="," />
             </Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">active cases</Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.recovered)}>
@@ -30,7 +29,6 @@ function Cards({data: {confirmed,recovered,deaths,lastUpdate}}) {
             seperator="," />
             </Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">active cases</Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.deaths)}>
@@ -41,7 +39,6 @@ function Cards({data: {confirmed,recovered,deaths,lastUpdate}}) {
             seperator="," />
             </Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">active cases</Typography>
           </CardContent>
         </Grid>
       </Grid>

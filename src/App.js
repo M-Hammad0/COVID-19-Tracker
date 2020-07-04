@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from "react";
-import { Cards, Charts, CountryPicker } from "./Components";
+import { Cards, Charts, CountryPicker, Header } from "./Components";
 import styles from "./App.module.css";
 import { fetchData } from "./api/index";
 
@@ -23,6 +23,7 @@ export default function App() {
 
   return (
     <div className={styles.container}>
+      <Header />
       <Cards data={stats.data} />
       <CountryPicker handleCountry={handleCountry} />
       <Charts data={stats.data} country={stats.country} />
